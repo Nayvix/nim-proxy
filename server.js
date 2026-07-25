@@ -38,6 +38,7 @@ const MODEL_MAPPING = {
   'gemini-pro': 'moonshotai/kimi-k2.5',
   'moonshotai/kimi-k2.6' : 'moonshotai/kimi-k2.6',
   'z-ai/glm-5.2' : 'z-ai/glm-5.2'
+  'minimaxai/minimax-m3' : 'minimaxai/minimax-m3'
 };
 
 // Root endpoint
