@@ -138,15 +138,17 @@ app.post('/v1/chat/completions', async (req, res) => {
       }
       
       if (!nimModel) {
-        const modelLower = model.toLowerCase();
-        if (modelLower.includes('gpt-4') || modelLower.includes('claude-opus') || modelLower.includes('405b')) {
-          nimModel = 'meta/llama-3.1-405b-instruct';
-        } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
-          nimModel = 'meta/llama-3.1-70b-instruct';
-        } else {
-          nimModel = 'meta/llama-3.1-8b-instruct';
-        }
-        console.log(`Using fallback model: ${nimModel}`);
+        // No silent guessing: if the model isn't in MODEL_MAPPING and NVIDIA
+        // doesn't recognize it directly, fail loudly instead of routing to a
+        // possibly-stale hardcoded fallback model.
+        console.error(`No mapping and no direct NIM support for model: ${model}`);
+        return res.status(404).json({
+          error: {
+            message: `Model "${model}" is not in MODEL_MAPPING and was not accepted directly by NVIDIA NIM. Check the exact model ID (e.g. it likely needs an org prefix like "deepseek-ai/...") or add it to MODEL_MAPPING.`,
+            type: 'invalid_request_error',
+            code: 404
+          }
+        });
       }
     }
     
