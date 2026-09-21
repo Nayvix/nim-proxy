@@ -38,6 +38,7 @@ const MODEL_MAPPING = {
   'z-ai/glm-5.3-flash': 'z-ai/glm-5.3-flash',
   'z-ai/glm-5.3': 'z-ai/glm-5.3',
   'deepseek-ai/deepseek-v4-flash-0731': 'deepseek-ai/deepseek-v4-flash-0731',
+  'nvidia/nemotron-3.5-lightning-30b-a3b': 'nvidia/nemotron-3.5-lightning-30b-a3b',
   'deepseek-ai/deepseek-v4-pro': 'deepseek-ai/deepseek-v4-pro'
   
 };
