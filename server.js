@@ -37,7 +37,7 @@ const MODEL_MAPPING = {
   'claude-3-sonnet': 'openai/gpt-oss-20b',
   'z-ai/glm-5.3-flash': 'z-ai/glm-5.3-flash',
   'z-ai/glm-5.3': 'z-ai/glm-5.3',
-  'deepseek-ai/deepseek-v4-flash-0731': 'deepseek-ai/deepseek-v4-flash-0731',
+  'deepseek-ai/deepseek-v4.1-flash': 'deepseek-ai/deepseek-v4.1-flash',
   'nvidia/nemotron-3.5-lightning-30b-a3b': 'nvidia/nemotron-3.5-lightning-30b-a3b',
   'nvidia/nemotron-3-super-120b-a12b': 'nvidia/nemotron-3-super-120b-a12b',
   'deepseek-ai/deepseek-v4-pro': 'deepseek-ai/deepseek-v4-pro'
