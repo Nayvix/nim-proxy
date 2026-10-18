@@ -31,7 +31,7 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwarg
 const MODEL_MAPPING = {
   'claude-3-opus': 'openai/gpt-oss-120b',
   'claude-3-sonnet': 'openai/gpt-oss-20b',
-  'z-ai/glm-5-3-flash': 'z-ai/glm-5-3-flash',
+  'z-ai/glm-5.3-flash': 'z-ai/glm-5.3-flash',
   'deepseek-ai/deepseek-v4.1-flash': 'deepseek-ai/deepseek-v4.1-flash',  
 };
 
